@@ -3,9 +3,13 @@
 require "src/Drawable.php";
 require "src/House.php";
 require "src/Rectangle.php";
+require "src/Picture.php";
 
-//$house = new House();
-//$house->draw();
-
+$house = new House();
 $rectangle = new Rectangle(10,5);
-$rectangle->draw();
+
+$picture = new Picture();
+$picture->add($house);
+$picture->add($rectangle);
+
+$picture->show();
